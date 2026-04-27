@@ -25,12 +25,15 @@ fun Menu(
                 TarjetaProducto(it.id)
             }
         }
+        Button(
+            onClick = onOrden
+        ) {}
     }
 }
 
-@Preview
-@Composable
-fun previewMenu() {
-    Menu()
-}
+//@Preview
+//@Composable
+//fun previewMenu() {
+//    Menu()
+//}
 
