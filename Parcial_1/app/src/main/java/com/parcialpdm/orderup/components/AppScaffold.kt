@@ -1,5 +1,6 @@
 package com.parcialpdm.orderup.components
 
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -13,7 +14,7 @@ import androidx.compose.ui.Modifier
 @Composable
 fun AppScaffold(
     titulo: String,
-    content: @Composable () -> Unit
+    content: @Composable (PaddingValues) -> Unit
 ) {
 
     Scaffold(
@@ -28,6 +29,6 @@ fun AppScaffold(
             )
         }
     ) {
-        innerPadding -> content()
+        innerPadding -> content(innerPadding)
     }
 }
